@@ -1,0 +1,67 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --bg: #f7f7f5;
+  --surface: #ebebe8;
+  --ink: #000000;
+  --muted: #666662;
+  --accent: #d0106f;
+  --accent-ink: #ffffff;
+
+  --field-periwinkle: #97aaf6;
+  --field-lime: #bbf697;
+  --field-amber: #fed878;
+  --field-cyan: #6ef8fb;
+
+  --font-sans: 'Pilcrow Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 3.8rem);
+  --step-hero: clamp(3rem, 2rem + 5vw, 6.5rem);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+p, li, span, button, input {
+  font-family: var(--font-sans);
+}
+
+/* Taste-skill house rules: motion layer on transform/opacity */
+.taste-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: tasteEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes tasteEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .taste-enter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
