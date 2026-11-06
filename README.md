@@ -2,7 +2,7 @@
 
 A fun and interactive learning app for kids. Built with **React + TypeScript + Vite**.
 
-🔗 **Live Demo:** (https://funlearning-reskin-mu.vercel.app/)[https://funlearning-reskin-mu.vercel.app/]
+🔗 **Live Demo:** https://funlearning-reskin-mu.vercel.app/
 
 ---
 
